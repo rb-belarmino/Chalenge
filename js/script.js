@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const authMethod = document.getElementById('authMethod').value
 
     // Validação simples
-    if (!email || !name || !role || !authMethod) {
+    if (!email || !name || !role || !cpf || !authMethod) {
       alert('Por favor, preencha todos os campos obrigatórios.')
       return
     }
