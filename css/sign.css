@@ -1,0 +1,265 @@
+:root {
+  --header-bg: #f0e6ff;
+  /* Lilás bem claro para o header */
+  --title-color: #5e3370;
+  /* Roxo escuro para o título da página */
+  --attention-red: #d93444;
+  /* Vermelho para "Atenção" */
+  --button-green: #63c98a;
+  /* Verde para botões "Prosseguir" e "Próximo" */
+  --logo-color-header: #5e3370;
+  --logo-color-card: #6c757d;
+  /* Cinza para o logo dentro do card */
+  --page-main-bg: #f8f9fa;
+  /* Cinza muito claro para o fundo principal (atrás do card) */
+  --card-bg: #ffffff;
+  --cancel-text-color: #d93444;
+  --cancel-border-color: #ced4da;
+  --profile-icon-bg: #ffffff;
+  --profile-icon-border: #adb5bd;
+  --profile-dropdown-color: #6c757d;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--page-main-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 90px;
+  /* Espaço para o footer fixo */
+}
+
+.header-custom {
+  background-color: var(--header-bg);
+  padding: 0.8rem 1.5rem;
+  /* Aumentado o padding lateral */
+  border-bottom: 1px solid #ddd;
+  /* Adiciona uma borda sutil */
+}
+
+.logo-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--logo-color-header);
+}
+
+.logo-header .check-mark {
+  color: var(--button-green);
+}
+
+.profile-section .profile-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--profile-icon-bg);
+  border: 1px solid var(--profile-icon-border);
+  border-radius: 50%;
+}
+
+.profile-section .bi-caret-down-fill {
+  color: var(--profile-dropdown-color);
+  font-size: 0.9rem;
+}
+
+.page-title-custom {
+  color: var(--title-color);
+  font-weight: 500;
+  margin-top: 2rem;
+  /* Aumenta a margem superior */
+  margin-bottom: 1.5rem;
+  /* Aumenta a margem inferior */
+}
+
+.attention-card {
+  background-color: var(--card-bg);
+  border: none;
+  /* Remove a borda padrão do card */
+  border-radius: 0.5rem;
+  /* Bordas levemente arredondadas */
+  max-width: 650px;
+  /* Aumenta a largura máxima */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attention-card .card-body {
+  padding: 2rem;
+  /* Aumenta o padding interno */
+}
+
+.attention-title {
+  color: var(--attention-red);
+  font-weight: bold;
+  font-size: 2.25rem;
+  /* Aumenta o tamanho da fonte */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.attention-card p {
+  font-size: 0.95rem;
+  /* Ajusta o tamanho da fonte do parágrafo */
+  line-height: 1.6;
+  color: #495057;
+  /* Cor de texto um pouco mais escura */
+}
+
+.logo-in-card {
+  font-weight: bold;
+  color: var(--logo-color-card);
+  font-size: 1.1rem;
+}
+
+.logo-in-card .check-mark {
+  color: var(--button-green);
+}
+
+.btn-prosseguir {
+  background-color: var(--button-green);
+  border-color: var(--button-green);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-prosseguir:hover {
+  background-color: darken(var(--button-green), 10%);
+  border-color: darken(var(--button-green), 10%);
+  color: white;
+}
+
+.footer-buttons {
+  background-color: #ffffff;
+  /* Fundo branco para o rodapé */
+  padding: 1rem 1.5rem;
+  /* Padding ajustado */
+  border-top: 1px solid #e0e0e0;
+  /* Borda superior sutil */
+}
+
+.btn-cancelar {
+  background-color: #f8f9fa;
+  /* Fundo cinza claro */
+  border: 1px solid var(--cancel-border-color);
+  color: var(--cancel-text-color);
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+}
+
+.btn-cancelar:hover {
+  background-color: #e9ecef;
+  color: var(--cancel-text-color);
+}
+
+.btn-proximo {
+  background-color: var(--button-green);
+  border-color: var(--button-green);
+  color: white;
+  font-weight: 500;
+  padding: 0.6rem 1.8rem;
+  /* Um pouco mais de padding horizontal */
+}
+
+.btn-proximo:hover {
+  background-color: darken(var(--button-green), 10%);
+  border-color: darken(var(--button-green), 10%);
+  color: white;
+}
+
+/* Ajustes para o conteúdo principal ocupar o espaço e centralizar */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centraliza horizontalmente o título e o card */
+  justify-content: center;
+  /* Centraliza verticalmente (se houver espaço) */
+  width: 100%;
+  padding-bottom: 2rem;
+  /* Espaço antes do rodapé fixo */
+}
+
+/* Adiciona sombra sutil ao card e botões do rodapé para profundidade */
+.attention-card {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.07);
+}
+
+.footer-buttons {
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.card-custom {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mic-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.mic-icon i {
+  font-size: 24px;
+  color: #555;
+}
+
+.instruction-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-buttons {
+  background-color: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.note {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.card-custom {
+  max-width: 600px;
+  margin: 0 auto;
+  /border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.code-inputs .code-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  outline: none;
+}
+
+.code-inputs .code-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
