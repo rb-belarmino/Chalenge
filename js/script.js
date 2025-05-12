@@ -170,7 +170,7 @@ document.getElementById('next-button').addEventListener('click', function () {
       mainContent.innerHTML = `
       <div class="container text-center">
           <h2 class="mt-5">Obrigado!</h2>
-          <p class="mt-3">Seu processo foi concluído com sucesso.</p>
+          <p class="mt-3">Assinatura salva com sucesso.</p>
           <a href="index.html" class="btn btn-success mt-4" onclick="window.location.reload()">Voltar ao Início</a>
         </div>
       
