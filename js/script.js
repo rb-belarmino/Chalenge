@@ -5,13 +5,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.getElementById('signatoryTable')
   const addButton = form.querySelector('button')
   const mainContent = document.getElementById('main-content')
-  mainContent.innerHTML = mainContents[currentStep]
+  const codeBoxes = document.querySelectorAll('.code-box')
+
+  codeBoxes.forEach((box, index) => {
+    box.addEventListener('input', event => {
+      const value = event.target.value
+
+      if (!/^\d$/.test(value)) {
+        event.target.value = ''
+        return
+      }
+      if (index < codeBoxes.length - 1) {
+        codeBoxes[index + 1].focus()
+      }
+    })
+
+    box.addEventListener('keydown', event => {
+      if (event.key === 'Backspace' && !box.value && index > 0) {
+        codeBoxes[index - 1].focus()
+      }
+    })
+  })
 
   addButton.addEventListener('click', () => {
-    const email = document.getElementById('email').value
-    const name = document.getElementById('name').value
+    const email = document.getElementById('email').value.trim()
+    const name = document.getElementById('name').value.trim()
     const role = document.getElementById('role').value
-    const cpf = document.getElementById('cpf').value
+    const cpf = document.getElementById('cpf').value.trim()
     const requestCpf = document.getElementById('requestCpf').checked
       ? 'Sim'
       : 'Não'
@@ -119,12 +139,12 @@ const mainContents = [
     <div class="container text-center">
       <p class="mt-4">Transcreva o código de segurança abaixo:</p>
         <div class="code-inputs d-flex justify-content-center gap-3 mt-3">
-          <input type="text" maxlength="1" class="code-box" />
-          <input type="text" maxlength="1" class="code-box" />
-          <input type="text" maxlength="1" class="code-box" />
-          <input type="text" maxlength="1" class="code-box" />
-          <input type="text" maxlength="1" class="code-box" />
-          <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
+            <input type="text" maxlength="1" class="code-box" />
         </div>
     </div>
 `
