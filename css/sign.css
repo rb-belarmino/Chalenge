@@ -263,3 +263,11 @@ body {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+.face-id-image {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}

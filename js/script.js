@@ -85,7 +85,7 @@ const mainContents = [
     <div class="container text-center">
         <div class="face-id-container">
           <div class="face-id-circle mx-auto">
-            <i class="bi bi-emoji-smile" style="font-size: 5rem;"></i>
+            <img src="/images/face-id.svg" class="face-id-image"></img>
           </div>
           <p class="mt-4">
             Posicione o rosto na moldura da câmera. <br>
